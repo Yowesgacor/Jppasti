@@ -2,96 +2,195 @@
 <html lang="id">
 <head>
   <meta charset="utf-8" />
-  <title>Giveaway</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Giveaway 100K BAGI MEMBER BARU - Tim Giveaway Official</title>
+  <link rel="icon" href="111.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;900&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin:0; padding:0; font-family:'Poppins', sans-serif; color: yellow; }
-    body { background:#0f172a; display:flex; justify-content:center; align-items:center; height:100vh; text-align:center; padding:15px; }
-    .container { width:100%; max-width:420px; }
+    :root {
+      --telegram: linear-gradient(90deg, #0088cc, #00bfff);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: yellow;
+    }
+    body {
+      background: #0f172a;
+      text-align: center;
+      padding: 20px;
+    }
+    img.banner {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      margin-bottom: 10px;
+    }
 
-    img.banner { width:100%; border-radius:16px; box-shadow:0 0 20px rgba(0,255,255,0.4); margin-bottom:10px; }
-
-    h1 { font-size:1.6rem; font-weight:900; margin:10px 0; color:#facc15; text-shadow:0 0 8px #facc15,0 0 16px #fbbf24,0 0 30px #f59e0b; }
-    h2 { font-size:1rem; margin-bottom:12px; color:#22d3ee; text-shadow:0 0 8px #22d3ee,0 0 16px #0ea5e9; }
-
-    .button { display:block; width:100%; margin:8px auto; padding:12px 0; border:none; border-radius:50px; color:white; font-weight:900; font-size:1rem; text-decoration:none; text-transform:uppercase; transition: transform 0.3s ease, box-shadow 0.3s ease; animation: fadeGlow 4s infinite alternate; }
-    .btn-red { background: linear-gradient(90deg,#ef4444,#dc2626); box-shadow:0 0 12px rgba(239,68,68,0.8); }
-    .btn-green { background: linear-gradient(90deg,#22c55e,#16a34a); box-shadow:0 0 12px rgba(34,197,94,0.8); }
-    .btn-blue { background: linear-gradient(90deg,#3b82f6,#2563eb); box-shadow:0 0 12px rgba(59,130,246,0.8); }
+    /* Tombol utama */
+    .button {
+      display: block;
+      width: 90%;
+      max-width: 350px;
+      margin: 10px auto;
+      padding: 14px 0;
+      border: none;
+      border-radius: 50px;
+      color: white;
+      font-family: 'Arial Black', Gadget, sans-serif;
+      font-weight: 900;
+      font-size: 1.2rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      animation: fadeGradient 5s infinite alternate;
+    }
+    .btn-red { background: linear-gradient(90deg, #ef4444, #dc2626); box-shadow: 0 0 15px rgba(239, 68, 68, 0.6); }
+    .btn-green { background: linear-gradient(90deg, #22c55e, #16a34a); box-shadow: 0 0 15px rgba(34, 197, 94, 0.6); }
+    .btn-blue { background: linear-gradient(90deg, #3b82f6, #2563eb); box-shadow: 0 0 15px rgba(59, 130, 246, 0.6); }
     .button:hover { transform: scale(1.07); }
-    @keyframes fadeGlow { 0% { filter:brightness(0.9); } 100% { filter:brightness(1.3); } }
+    @keyframes fadeGradient { 0% { filter: brightness(0.9);} 50% {filter:brightness(1.2);} 100%{filter:brightness(0.9);} }
 
-    .rules-box { background:#1e293b; border:2px solid #22d3ee; border-radius:12px; padding:12px; margin:12px auto; max-width:420px; color:#facc15; box-shadow:0 0 12px rgba(34,211,238,0.6); font-size:0.85rem; text-align:left; }
-    .rules-box h3 { font-size:1rem; margin-bottom:6px; color:#22d3ee; text-shadow:0 0 8px #22d3ee,0 0 16px #0ea5e9; }
-    .rules-box ul { list-style:none; padding:0; margin:0; }
-    .rules-box li { margin-bottom:4px; padding-left:16px; position:relative; }
-    .rules-box li::before { content:"✔"; color:#22d3ee; position:absolute; left:0; }
+    /* Tombol Telegram */
+    .btn-telegram {
+      display: inline-block;
+      background: var(--telegram);
+      color: white;
+      font-weight: 700;
+      padding: 10px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1rem;
+      margin-top: 10px;
+      box-shadow: 0 0 12px rgba(0,136,204,0.5);
+      transition: transform 0.3s ease;
+    }
+    .btn-telegram:hover { transform: scale(1.07); box-shadow: 0 0 18px rgba(0,191,255,0.7); }
 
-    .countdown { margin:8px 0; font-size:1.1rem; font-weight:700; color:#facc15; text-shadow:0 0 8px #facc15; }
+    h1 { font-size: 1.7rem; font-weight: 900; margin: 15px 0 10px; text-shadow: 0 0 12px rgba(255,255,0,0.7); }
+    h2 { font-size: 1.2rem; margin-bottom: 15px; }
 
+    .benefit-box {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 12px;
+      margin: 15px auto;
+      max-width: 500px;
+      font-weight: 600;
+      color: yellow;
+      box-shadow: 0 0 8px rgba(6,182,212,0.2);
+    }
+
+    marquee { font-weight: 700; margin: 10px 0; }
+    .countdown { margin: 10px 0; font-size: 1.3rem; font-weight: 700; }
+    .social-proof { font-weight: 600; margin-top: 10px; }
+    .trust { margin-top: 15px; font-size: 0.9rem; }
+    footer { margin-top: 15px; font-size: 0.9rem; }
+
+    /* Popup style */
     #popup-root { position: fixed; top:0; left:0; width:100%; height:100%; z-index:10000; display:none; }
-    .popup-overlay { background: rgba(0,0,0,0.7); width:100%; height:100%; display:flex; justify-content:center; align-items:center; }
-    .popup-box { background:#1e293b; color:yellow; border-radius:12px; padding:18px; width:90%; max-width:360px; box-shadow:0 0 20px rgba(0,255,255,0.6); text-align:left; animation: popupIn 0.5s ease forwards; }
+    .popup-overlay { background: rgba(0,0,0,0.7); width:100%; height:100%; display:flex; justify-content:center; align-items:center; animation: fadeOverlay 0.4s ease forwards; }
+    .popup-box {
+      background: #1e293b;
+      color: yellow;
+      border-radius: 12px;
+      padding: 18px;
+      width: 100%;
+      max-width: 380px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+      text-align: left;
+      transform: translateY(30px);
+      opacity: 0;
+      animation: popupIn 0.5s ease forwards;
+    }
     .popup-top { text-align:center; margin-bottom:12px; }
-    .popup-top h3 { margin:0; font-size:1.2rem; font-weight:900; color:#f87171; text-shadow:0 0 10px #f87171; }
+    .popup-top h3 { margin:0; font-size:1.2rem; font-weight:900; color:#f87171; }
     .popup-top .day-label { font-size:0.9rem; font-weight:700; margin-top:6px; color:#22d3ee; }
     .winner-list { list-style:none; padding:0; margin:0; max-height:200px; overflow-y:auto; }
-    .winner-list li { padding:6px 0; border-bottom:1px dashed #334155; font-weight:600; }
+    .winner-list li { padding:6px 0; border-bottom:1px dashed #334155; font-weight:600; color:yellow; }
     .popup-actions { text-align:center; margin-top:12px; }
     .popup-close { background:#ef4444; color:white; border:none; padding:8px 16px; border-radius:8px; font-weight:700; cursor:pointer; }
     .popup-close:hover { background:#dc2626; }
+
+    /* Animations */
+    @keyframes fadeOverlay { from {opacity:0;} to {opacity:1;} }
     @keyframes popupIn { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="111.png" alt="Banner Giveaway" class="banner" />
-    <h1>🎉 GIVEAWAY 100K MEMBER BARU 🎉</h1>
-    <h2>Bonus Spesial Untuk 10 Pendaftar Setiap Hari!</h2>
+  <!-- Banner -->
+  <img src="111.png" alt="Banner Giveaway" class="banner" />
 
-    <!-- Tombol CTA -->
-    <a href="https://psce.pw/86yz57" class="button btn-red" target="_blank" rel="noopener noreferrer">🎁 Gabung Sekarang</a>
-    <a href="https://psce.pw/86yz57" class="button btn-green" target="_blank" rel="noopener noreferrer">🔥 Buat Akun Gacor</a>
-    <a href="https://psce.pw/86yz57" class="button btn-blue" target="_blank" rel="noopener noreferrer">⭐ ID VIP Gratis</a>
+  <!-- Tombol utama -->
+  <a href="https://psce.pw/86yz57" class="button btn-red">🎁 Gabung Sekarang</a>
+  <a href="https://psce.pw/86yz57" class="button btn-green" style="font-size:1.1rem;">🔥 Buat Akun Gacor Disini</a>
+  <a href="https://psce.pw/86yz57" class="button btn-blue" style="font-size:1rem;">⭐ ID VIP Free</a>
 
-    <div class="rules-box">
-      <h3>📜 Rules Giveaway</h3>
-      <ul>
-        <li>Wajib daftar lewat link tombol di atas</li>
-        <li>Bonus hanya untuk 10 pendaftar baru setiap hari</li>
-        <li>Pemenang diumumkan realtime di popup</li>
-        <li>Satu akun hanya bisa menang 1 kali</li>
-        <li>⚖️ Undi secara acak & keputusan admin tidak bisa diganggu gugat</li>
-      </ul>
-    </div>
+  <h1>🎉 GIVEAWAY 100K MEMBER BARU 🎉</h1>
+  <h2>Bonus Spesial Hanya Untuk 10 Pendaftar Setiap Hari!</h2>
 
-    <h3 style="margin-top:10px;">⏰ Daftar sebelum undian ditutup:</h3>
-    <div id="countdown" class="countdown"></div>
+  <marquee behavior="scroll" direction="left">
+    📢 Syarat: Daftar Akun Baru • Undian Hanya untuk 10 Member Beruntung • Semua Member Tetap Berpeluang Setiap Hari!
+  </marquee>
+
+  <h3>⏰ Daftar Sebelum Undian Hari Ini Ditutup:</h3>
+  <div id="countdown" class="countdown"></div>
+
+  <div class="benefit-box">
+    ✅ Undian Resmi Setiap Hari<br>
+    💸 Hadiah Saldo 100K<br>
+    🔒 Aman & Transparan<br>
+    🧭 Dipantau Langsung oleh ADMIN Giveaway Official
   </div>
 
+  <p class="social-proof">🔥 Lebih dari <strong>2.000+</strong> member baru telah bergabung hari ini! Jangan ketinggalan! 🔥</p>
+
+  <div class="trust">
+    <p>📢 Pengumuman pemenang diposting setiap hari di Telegram resmi:</p>
+    <a href="https://t.me/timgiveaway2025" target="_blank" class="btn-telegram">📲 Join Telegram Official</a>
+    <p style="margin-top:8px;">✅ Sistem Aman • 🎯 Transparan • 🏆 Dipantau Langsung oleh ADMIN</p>
+  </div>
+
+  <footer>© 2025 Tim Giveaway Official. Semua hak dilindungi.</footer>
+
+  <!-- Popup root -->
   <div id="popup-root"></div>
 
+  <!-- Confetti -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script>
+    // Countdown harian
     function startCountdown() {
       const countdown = document.getElementById("countdown");
-      const end = new Date(); end.setHours(23,59,59,999);
+      const end = new Date();
+      end.setHours(23, 59, 59, 999);
       setInterval(() => {
         const now = new Date();
         const diff = end - now;
-        if (diff <= 0) { countdown.innerText = "Undian Hari Ini Ditutup!"; return; }
-        const h = Math.floor(diff/1000/60/60);
-        const m = Math.floor((diff/1000/60)%60);
-        const s = Math.floor((diff/1000)%60);
+        if (diff <= 0) {
+          countdown.innerText = "Undian Hari Ini Ditutup!";
+          return;
+        }
+        const h = Math.floor(diff / 1000 / 60 / 60);
+        const m = Math.floor((diff / 1000 / 60) % 60);
+        const s = Math.floor((diff / 1000) % 60);
         countdown.innerText = `${h}j ${m}m ${s}d`;
-      },1000);
+      }, 1000);
     }
     startCountdown();
 
+    // --- Helper winners ---
     function getDayIndex() {
       const today = new Date();
       const start = new Date("2025-10-01");
-      return Math.floor((today-start)/(1000*60*60*24)) % 3;
+      const diffDays = Math.floor((today - start) / (1000 * 60 * 60 * 24));
+      return diffDays % 3;
     }
     function randomName(seed) {
       const names = ["Adi","Budi","Citra","Dewi","Eka","Fajar","Gita","Hari","Indra","Joko","Kiki","Lina","Made","Nina","Oka","Putra","Rani","Sari","Tono","Wati"];
@@ -100,33 +199,53 @@
     function randomPhone(seed) {
       const prefix = ["0812","0813","0821","0857","0878"];
       const pre = prefix[seed % prefix.length];
-      const mid = Math.floor(100+(seed*13)%900);
-      const end = Math.floor(100+(seed*7)%900);
-      return pre+"xxx"+mid+"xxx"+end;
+      const mid = Math.floor(100 + (seed*13)%900);
+      const end = Math.floor(100 + (seed*7)%900);
+      return pre + "xxx" + mid + "xxx" + end;
     }
-    function generateWinners(seed,count) {
-      const winners=[];
-      for(let i=0;i<count;i++){ const s=seed+i*37; winners.push(randomName(s)+" "+randomPhone(s)); }
+    function generateWinners(seed, count) {
+      const winners = [];
+      for (let i=0;i<count;i++) {
+        const s = seed + i*37;
+        winners.push(randomName(s) + " " + randomPhone(s));
+      }
       return winners;
     }
-    function getTodayKey(){ return new Date().toISOString().split('T')[0]; }
-    function shouldShowPopup(){ return localStorage.getItem("disablePopupDate")!==getTodayKey(); }
-    function disablePopupToday(){ localStorage.setItem("disablePopupDate",getTodayKey()); }
 
+    // --- localStorage helpers ---
+    function getTodayKey() {
+      const today = new Date();
+      return today.toISOString().split('T')[0];
+    }
+    function shouldShowPopup() {
+      const disabledDate = localStorage.getItem("disablePopupDate");
+      return disabledDate !== getTodayKey();
+    }
+    function disablePopupToday() {
+      localStorage.setItem("disablePopupDate", getTodayKey());
+    }
+
+    // --- Popup ---
     function showWinnersPopup() {
       if (!shouldShowPopup()) return;
-      const dayIndex=getDayIndex();
-      const seeds=[1543,3921,7812];
-      const winners=generateWinners(seeds[dayIndex],10);
-      const popupRoot=document.getElementById("popup-root");
-      const html=`
+
+      const dayIndex = getDayIndex();
+      const seeds = [1543, 3921, 7812];
+      const seed = seeds[dayIndex];
+      const winners = generateWinners(seed, 10);
+
+      const popupRoot = document.getElementById("popup-root");
+      const dayLabel = dayIndex + 1;
+      const html = `
         <div class="popup-overlay" id="popup-overlay">
           <div class="popup-box">
             <div class="popup-top">
               <h3>🎉 PEMENANG HARI INI</h3>
-              <div class="day-label">HARI KE-${dayIndex+1}</div>
+              <div class="day-label">HARI KE: ${dayLabel}</div>
             </div>
-            <ul class="winner-list">${winners.map(w=>`<li>${w}</li>`).join('')}</ul>
+            <ul class="winner-list">
+              ${winners.map(w => `<li>${w}</li>`).join('')}
+            </ul>
             <div class="popup-actions">
               <label style="display:block; font-size:0.85rem; margin-bottom:6px; cursor:pointer;">
                 <input type="checkbox" id="disable-today" /> Jangan tampilkan lagi hari ini
@@ -134,16 +253,34 @@
               <button class="popup-close" id="popup-close-btn">Tutup</button>
             </div>
           </div>
-        </div>`;
-      popupRoot.innerHTML=html;
-      popupRoot.style.display="block";
-      const overlay=document.getElementById("popup-overlay");
-      const closeBtn=document.getElementById("popup-close-btn");
-      closeBtn.addEventListener("click",()=>{ if(document.getElementById("disable-today").checked) disablePopupToday(); popupRoot.style.display="none"; });
-      overlay.addEventListener("click",e=>{ if(e.target===overlay){ if(document.getElementById("disable-today").checked) disablePopupToday(); popupRoot.style.display="none"; } });
-      confetti({ particleCount:80, spread:80, origin:{ y:0.6 } });
+        </div>
+      `;
+      popupRoot.innerHTML = html;
+      popupRoot.style.display = "block";
+
+      const overlay = document.getElementById("popup-overlay");
+      const closeBtn = document.getElementById("popup-close-btn");
+      closeBtn.addEventListener('click', () => {
+        const cb = document.getElementById("disable-today");
+        if (cb && cb.checked) disablePopupToday();
+        popupRoot.style.display="none";
+      });
+      overlay.addEventListener('click', e => {
+        if (e.target === overlay) {
+          const cb = document.getElementById("disable-today");
+          if (cb && cb.checked) disablePopupToday();
+          popupRoot.style.display="none";
+        }
+      });
+      firePopupConfetti();
     }
-    window.addEventListener("load",showWinnersPopup);
+
+    function firePopupConfetti() {
+      confetti({ particleCount: 80, spread: 80, origin: { y: 0.6 } });
+    }
+
+    // Trigger popup setelah load
+    window.addEventListener("load", showWinnersPopup);
   </script>
 </body>
 </html>
