@@ -15,7 +15,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      color: yellow;
+      color: #f1f5f9; /* Lebih soft daripada kuning */
     }
     body {
       background: #0f172a;
@@ -30,7 +30,6 @@
       margin-bottom: 10px;
     }
 
-    /* Tombol utama */
     .button {
       display: block;
       width: 90%;
@@ -56,7 +55,6 @@
     .button:hover { transform: scale(1.07); }
     @keyframes fadeGradient { 0% { filter: brightness(0.9);} 50% {filter:brightness(1.2);} 100%{filter:brightness(0.9);} }
 
-    /* Tombol Telegram */
     .btn-telegram {
       display: inline-block;
       background: var(--telegram);
@@ -72,8 +70,18 @@
     }
     .btn-telegram:hover { transform: scale(1.07); box-shadow: 0 0 18px rgba(0,191,255,0.7); }
 
-    h1 { font-size: 1.7rem; font-weight: 900; margin: 15px 0 10px; text-shadow: 0 0 12px rgba(255,255,0,0.7); }
-    h2 { font-size: 1.2rem; margin-bottom: 15px; }
+    h1 {
+      font-size: 1.7rem;
+      font-weight: 900;
+      margin: 15px 0 10px;
+      color: #ffe600;
+      text-shadow: 0 0 12px rgba(255,255,0,0.7);
+    }
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #cbd5e1;
+    }
 
     .benefit-box {
       background: #1e293b;
@@ -83,51 +91,20 @@
       margin: 15px auto;
       max-width: 500px;
       font-weight: 600;
-      color: yellow;
+      color: #facc15;
       box-shadow: 0 0 8px rgba(6,182,212,0.2);
     }
 
-    marquee { font-weight: 700; margin: 10px 0; }
-    .countdown { margin: 10px 0; font-size: 1.3rem; font-weight: 700; }
-    .social-proof { font-weight: 600; margin-top: 10px; }
-    .trust { margin-top: 15px; font-size: 0.9rem; }
-    footer { margin-top: 15px; font-size: 0.9rem; }
-
-    /* Popup style */
-    #popup-root { position: fixed; top:0; left:0; width:100%; height:100%; z-index:10000; display:none; }
-    .popup-overlay { background: rgba(0,0,0,0.7); width:100%; height:100%; display:flex; justify-content:center; align-items:center; animation: fadeOverlay 0.4s ease forwards; }
-    .popup-box {
-      background: #1e293b;
-      color: yellow;
-      border-radius: 12px;
-      padding: 18px;
-      width: 100%;
-      max-width: 380px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-      text-align: left;
-      transform: translateY(30px);
-      opacity: 0;
-      animation: popupIn 0.5s ease forwards;
-    }
-    .popup-top { text-align:center; margin-bottom:12px; }
-    .popup-top h3 { margin:0; font-size:1.2rem; font-weight:900; color:#f87171; }
-    .popup-top .day-label { font-size:0.9rem; font-weight:700; margin-top:6px; color:#22d3ee; }
-    .winner-list { list-style:none; padding:0; margin:0; max-height:200px; overflow-y:auto; }
-    .winner-list li { padding:6px 0; border-bottom:1px dashed #334155; font-weight:600; color:yellow; }
-    .popup-actions { text-align:center; margin-top:12px; }
-    .popup-close { background:#ef4444; color:white; border:none; padding:8px 16px; border-radius:8px; font-weight:700; cursor:pointer; }
-    .popup-close:hover { background:#dc2626; }
-
-    /* Animations */
-    @keyframes fadeOverlay { from {opacity:0;} to {opacity:1;} }
-    @keyframes popupIn { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
+    marquee { font-weight: 700; margin: 10px 0; color: #38bdf8; }
+    .countdown { margin: 10px 0; font-size: 1.3rem; font-weight: 700; color: #22d3ee; }
+    .social-proof { font-weight: 600; margin-top: 10px; color: #a5f3fc; }
+    .trust { margin-top: 15px; font-size: 0.9rem; color: #f1f5f9; }
+    footer { margin-top: 15px; font-size: 0.9rem; color: #64748b; }
   </style>
 </head>
 <body>
-  <!-- Banner -->
   <img src="111.png" alt="Banner Giveaway" class="banner" />
 
-  <!-- Tombol utama -->
   <a href="https://psce.pw/86yz57" class="button btn-red">🎁 Gabung Sekarang</a>
   <a href="https://psce.pw/86yz57" class="button btn-green" style="font-size:1.1rem;">🔥 Buat Akun Gacor Disini</a>
   <a href="https://psce.pw/86yz57" class="button btn-blue" style="font-size:1rem;">⭐ ID VIP Free</a>
@@ -139,7 +116,7 @@
     📢 Syarat: Daftar Akun Baru • Undian Hanya untuk 10 Member Beruntung • Semua Member Tetap Berpeluang Setiap Hari!
   </marquee>
 
-  <h3>⏰ Daftar Sebelum Undian Hari Ini Ditutup:</h3>
+  <h3 style="color:#38bdf8;">⏰ Daftar Sebelum Undian Hari Ini Ditutup:</h3>
   <div id="countdown" class="countdown"></div>
 
   <div class="benefit-box">
@@ -159,9 +136,6 @@
 
   <footer>© 2025 Tim Giveaway Official. Semua hak dilindungi.</footer>
 
-  <!-- Popup root -->
-  <div id="popup-root"></div>
-
   <!-- Confetti -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script>
@@ -177,110 +151,4 @@
           countdown.innerText = "Undian Hari Ini Ditutup!";
           return;
         }
-        const h = Math.floor(diff / 1000 / 60 / 60);
-        const m = Math.floor((diff / 1000 / 60) % 60);
-        const s = Math.floor((diff / 1000) % 60);
-        countdown.innerText = `${h}j ${m}m ${s}d`;
-      }, 1000);
-    }
-    startCountdown();
-
-    // --- Helper winners ---
-    function getDayIndex() {
-      const today = new Date();
-      const start = new Date("2025-10-01");
-      const diffDays = Math.floor((today - start) / (1000 * 60 * 60 * 24));
-      return diffDays % 3;
-    }
-    function randomName(seed) {
-      const names = ["Adi","Budi","Citra","Dewi","Eka","Fajar","Gita","Hari","Indra","Joko","Kiki","Lina","Made","Nina","Oka","Putra","Rani","Sari","Tono","Wati"];
-      return names[seed % names.length];
-    }
-    function randomPhone(seed) {
-      const prefix = ["0812","0813","0821","0857","0878"];
-      const pre = prefix[seed % prefix.length];
-      const mid = Math.floor(100 + (seed*13)%900);
-      const end = Math.floor(100 + (seed*7)%900);
-      return pre + "xxx" + mid + "xxx" + end;
-    }
-    function generateWinners(seed, count) {
-      const winners = [];
-      for (let i=0;i<count;i++) {
-        const s = seed + i*37;
-        winners.push(randomName(s) + " " + randomPhone(s));
-      }
-      return winners;
-    }
-
-    // --- localStorage helpers ---
-    function getTodayKey() {
-      const today = new Date();
-      return today.toISOString().split('T')[0];
-    }
-    function shouldShowPopup() {
-      const disabledDate = localStorage.getItem("disablePopupDate");
-      return disabledDate !== getTodayKey();
-    }
-    function disablePopupToday() {
-      localStorage.setItem("disablePopupDate", getTodayKey());
-    }
-
-    // --- Popup ---
-    function showWinnersPopup() {
-      if (!shouldShowPopup()) return;
-
-      const dayIndex = getDayIndex();
-      const seeds = [1543, 3921, 7812];
-      const seed = seeds[dayIndex];
-      const winners = generateWinners(seed, 10);
-
-      const popupRoot = document.getElementById("popup-root");
-      const dayLabel = dayIndex + 1;
-      const html = `
-        <div class="popup-overlay" id="popup-overlay">
-          <div class="popup-box">
-            <div class="popup-top">
-              <h3>🎉 PEMENANG HARI INI</h3>
-              <div class="day-label">HARI KE: ${dayLabel}</div>
-            </div>
-            <ul class="winner-list">
-              ${winners.map(w => `<li>${w}</li>`).join('')}
-            </ul>
-            <div class="popup-actions">
-              <label style="display:block; font-size:0.85rem; margin-bottom:6px; cursor:pointer;">
-                <input type="checkbox" id="disable-today" /> Jangan tampilkan lagi hari ini
-              </label>
-              <button class="popup-close" id="popup-close-btn">Tutup</button>
-            </div>
-          </div>
-        </div>
-      `;
-      popupRoot.innerHTML = html;
-      popupRoot.style.display = "block";
-
-      const overlay = document.getElementById("popup-overlay");
-      const closeBtn = document.getElementById("popup-close-btn");
-      closeBtn.addEventListener('click', () => {
-        const cb = document.getElementById("disable-today");
-        if (cb && cb.checked) disablePopupToday();
-        popupRoot.style.display="none";
-      });
-      overlay.addEventListener('click', e => {
-        if (e.target === overlay) {
-          const cb = document.getElementById("disable-today");
-          if (cb && cb.checked) disablePopupToday();
-          popupRoot.style.display="none";
-        }
-      });
-      firePopupConfetti();
-    }
-
-    function firePopupConfetti() {
-      confetti({ particleCount: 80, spread: 80, origin: { y: 0.6 } });
-    }
-
-    // Trigger popup setelah load
-    window.addEventListener("load", showWinnersPopup);
-  </script>
-</body>
-</html>
+        const h = Math.floor(diff / 1000
